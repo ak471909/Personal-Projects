@@ -1,0 +1,33 @@
+Sudoku solver algorithm:
+
+Input and ouput:
+Input - A 9 x 9 matrix is taken in as Sudoku grid. blank spaces are denoted as 0
+Output - Final matrix filled with numbers. False is returned if no  solution exists
+
+
+
+methods required in java
+
+1. method to check if the number can be placed in the row - validRow
+
+2. Method to check if the number can be placed in the column - ValidCol
+
+3. Method to check if the number can be placed in the 3x3 box - ValidBox
+-integer division of row and column of selected cell by 3
+-multiply the resulting 2 numbers by 3 
+- the new numbers give the starting row and column number of the 3x3 grid of n     selected cell
+- create a loop to compare number with 3x3 grid
+
+
+4. Method to combine above 3 methods - ValidPlace
+- returns true if placement is valid for above 3 methods
+
+5.Method to solve board using backtracking and recusrion - SolvePuzzle
+- traverse the grid cell by cell to find empty space 
+- when empty space is found check space if any of the 9 numbers can be put in tha scpace
+- call SolvePuzzle method again to repeat process  (backtracing)
+- if solvePuzzle is true after recusrsive backtracing return true
+- return false after the loop to traverse numbers 1 to 9 finishes (there are no possible solutions)
+
+
+6. Method to display board - disBoard
