@@ -1,0 +1,82 @@
+.e14{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.e14-pfp{
+  height: 1cm;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 2mm;
+}
+
+.e14-userid{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2cm;
+  flex: 1;  
+}
+
+.e14-adfrn{
+  border: none;
+  font-weight: bold;
+  background-color: rgb(75, 134, 252);
+  color: white;
+  border-radius: 3px;
+  padding-top: 2mm;
+  padding-bottom: 2mm;
+  width: 2.5cm;
+  cursor: pointer;
+  margin-right: 2mm;
+}
+
+.e14-msg{
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  padding-top: 2mm;
+  padding-bottom: 2mm;
+  width: 2.5cm;
+  cursor: pointer;
+  margin-right: 2cm; 
+}
+
+.column1-pfp-f14{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 2cm;
+  align-items: center;
+}
+
+.pfp1-f14{
+  height: 1.5cm;
+  width: 1.5cm;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.pfp2-f14{
+  width: 1.5cm;
+    height: 1.5cm;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 60px;
+    -moz-background-clip: padding;
+    border-radius: 60px;
+    background-clip: padding-box;
+    margin: 7px 0 0 5px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+}
+

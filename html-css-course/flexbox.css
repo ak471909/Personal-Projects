@@ -1,0 +1,88 @@
+.f13{
+  margin-top: 1cm;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  width: 12cm;
+  font-family: arial;
+}
+
+.row1-f13{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3mm;
+}
+
+.row1a-f13-username{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0;
+}
+
+
+.username-f13{
+  margin-right: 2mm;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.userat-f13{
+  font-family: arial;
+  color: rgb(103, 103, 103);
+}
+
+.row2a-f13-title{
+  width: 10cm;
+  margin-top: -2mm;
+}
+
+.pic-f13{
+  margin-top: 3mm;
+  margin-left: 4mm;
+  margin-right: 3mm;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.row2-f13{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2cm; 
+}
+
+.button-left{
+  background-color: rgb(206, 206, 206);
+  height: 90px;
+  border: none;
+  width: 2.7cm;
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: -1px -1px 1px rgba(0,0,0,0.15), 0px 1px 1px rgba(0,0,0,0.15);
+}
+
+.button-right{
+  margin-bottom: 4mm;
+  width: 6.7cm;
+  height: 90px;
+  border: none;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0px -1px 1px rgba(0,0,0,0.15); 
+}
+
+.yt-site-f13{
+  text-align: left;
+  margin-left: 3mm;
+  margin-bottom: 5px;
+  color: rgb(95, 94, 94);
+  font-size: 16px;
+}
+
+.yt-title-f13{
+  text-align: left;
+  width: 6.2cm;
+  font-size: 16px;
+  margin-top: 0;
+  margin-left: 3mm;
+}

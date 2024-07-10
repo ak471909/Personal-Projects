@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Practice</title>
+    <link rel="stylesheet" href="flexbox.css">
+  </head>
+  <body style="padding-bottom: 1000px;">
+    <div 
+    style="display: flex; flex-direction: row; margin-top: 30px;">
+      <div style="background-color: lightblue;">div 1 text</div>
+      <div style="background-color: lightpink;">div 2 <p>text</p></div>
+    </div>
+
+    <div 
+    style="
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;">
+      <div style="background-color: lightblue; flex: 1">flex 1</div>
+      <div style="background-color: lightpink; width: 100px">100 px</div>
+      <div style="background-color: lightblue; flex: 2">flex 2</div>
+    </div>
+
+    <div 
+    style="
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray">
+      <div style="background-color: lightblue; width: 100px">100 px</div>
+      <div style="background-color: lightpink; width: 100px">100 px</div>
+      <div style="background-color: lightblue; width: 100px;">100 px</div>
+    </div>
+
+    <div 
+    style="
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray">
+      <div style="background-color: lightblue; width: 100px">100 px</div>
+      <div style="background-color: lightpink; width: 100px">100 px</div>
+      <div style="background-color: lightblue; width: 100px;">100 px</div>
+    </div>
+
+    
+    <div 
+    style="
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray">
+      <div style="background-color: lightblue; width: 100px">100 px</div>
+      <div style="background-color: lightpink; width: 100px">100 px</div>
+      <div style="background-color: lightblue; width: 100px;">100 px</div>
+    </div>
+
+    <div class="a12" style="
+    display: flex;
+    flex-direction: row;
+    margin-top: 2cm;
+    ">
+      <div style="background-color: lightblue; width: 200px;">200 px</div>
+      <div style="background-color: lightpink;width: 75px;">75 px</div>
+    </div>
+
+    <div class="12b" style="
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;"> 
+      <div style="background-color: lightblue; width: 50px;">item1</div>
+      <div style="background-color: lightpink; flex: 1">item2</div>
+      <div style="background-color: lightblue; width: 75px;">item3</div>
+    </div>
+
+    <div class="12c" style="
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;
+    justify-content: space-between;"> 
+      <div style="background-color: lightpink;">item1</div>
+      <div style="background-color: lightpink;">item2</div>
+      <div style="background-color: lightpink;">item3</div>
+      <div style="background-color: lightpink;">item4</div>
+    </div>
+  
+    <div class="12d" style="
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    justify-content: space-between;
+    align-items: center;"> 
+      <div style="background-color: lightpink;">item1</div>
+      <div style=""><p style="background-color: rgb(104, 104, 104); color: white; font-family: arial;">more familiar with how it works</p></div>
+      <div style="background-color: lightpink;">item3</div>
+    </div>
+
+    <div class="e12" style="display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1cm;
+    height: 150px;
+    width:7cm;
+    border-color: black;
+    border-style: solid;
+    border:none;
+    border-radius: 3px;
+    margin-left: 2mm;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.15), -2px -2px 1px rgba(0,0,0,0.15);">
+      <div class="home" style="
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      ">
+      
+         <div style="margin-left: 3mm; flex: 1; font-weight:500; font-family: arial;"><p>Home</p></div>
+         <button style="
+         color: white;
+         background-color: rgb(97, 97, 255);
+         border: none;
+         padding-left: 3mm;
+         padding-right: 3mm;
+         padding-top: 1mm;
+         padding-bottom: 1mm;
+         border-radius: 10cm;
+         font-weight: bold;
+         margin-right: 3mm;
+         cursor: pointer;
+         ">14</button>
+      </div>
+  
+      <div class="Notifications" style="
+      display: flex;
+      flex-direction: row;
+      align-items: center;">
+         <div style="margin-left: 3mm; flex: 1;  font-weight:500; font-family: arial;"><p>Notifications</p></div>
+         <button style="
+         color: white;
+         background-color: rgb(97, 97, 255);
+         border: none;
+         padding-left: 3mm;
+         padding-right: 3mm;
+         padding-top: 1mm;
+         padding-bottom: 1mm;
+         border-radius: 10cm;
+         font-weight: bold;
+         margin-right: 3mm;
+         cursor: pointer;
+         ">3</button>
+         
+      </div>
+  
+      <div class="Messages" style="
+      display: flex;
+      flex-direction: row;
+      align-items: center;">
+         <div style="margin-left: 3mm; flex: 1;  font-weight:500; font-family: arial;"><p>Messages</p></div>
+         <button style="
+         color: white;
+         background-color: rgb(97, 97, 255);
+         border: none;
+         padding-left: 3mm;
+         padding-right: 3mm;
+         padding-top: 1mm;
+         padding-bottom: 1mm;
+         border-radius: 10cm;
+         font-weight: bold;
+         margin-right: 3mm;
+         cursor: pointer;
+         ">5</button>
+      </div>
+    </div>
+
+    <div class="f12" style="
+    margin-top: 1cm;
+    display: flex; 
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    width: 195mm;
+    background-color: rgb(146, 68, 146);
+    margin-bottom: 2cm;">
+      <div class="Home-12f" style="
+      font-family: arial; 
+      font-weight: bold; 
+      font-size: 14px; 
+      color: white; 
+      width: 3cm; 
+      margin-left: 
+      4mm; "><p>Home</p></div>
+      <div class="Search-12f" style="flex: 1;"><input style="
+      background-color: white;
+      color: rgb(96,96,96);
+       border: none;
+       padding-top: 2mm;
+       padding-bottom: 2mm;
+       padding-left: 4mm;
+       padding-right: 8cm;
+       border-radius: 10cm;
+       margin-top: 3mm;
+       margin-bottom: 3mm;
+       outline: none; " placeholder="Search"></div>
+      <div style="width: 5cm;"><button style="
+      background-color: rgb(146, 68, 146);
+      margin-left: 10mm;
+      font-family: arial;
+      font-size: 15px;
+      padding-top: 2mm;
+      padding-bottom: 2mm;
+      padding-left: 4mm;
+      padding-right: 4mm;
+      border-color: white;
+      border-style: solid;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;">Download</button></div>
+      
+    </div>
+
+    <div class="g12" style="
+    width: 8cm;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.15), -2px -2px 2px rgba(0,0,0,0.15);
+    margin-left: 2mm;
+    margin-bottom: 1cm;">
+      <div style="display: flex; flex-direction: row; align-items: center; width: 8cm;">
+        <div><img src="practice/pictures/dog-1.jpg" style="
+          border-radius: 50%;
+          width: 15mm;
+          height: 15mm;
+          flex: 3cm;
+          margin-left: 3mm;
+          margin-right: 3mm;"></div>
+        
+    
+        <div style="line-height: 1mm; flex: 1;">
+          <p style="
+          font-weight: bold;
+          font-family: arial;">oliver</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);"">the dog</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);
+          font-size: 3.5mm;">Popular</p>
+        </div>
+    
+        
+        <div style="margin-right: 3mm;"><button style="
+          background-color: rgb(26, 117, 253);
+          border: none;
+          color: white;
+          padding-left: 3mm;
+          padding-right: 3mm;
+          padding-top: 2mm;
+          padding-bottom: 2mm;
+          font-family: arial;
+          font-weight: bold;
+          border-radius: 3px;
+          cursor:pointer;">Follow</button></div>
+        
+    
+    
+      </div>
+  
+      
+      <div style="display: flex; flex-direction: row; align-items: center; width: 8cm;">
+        <div><img src="practice/pictures/dog-2.jpg" style="
+          border-radius: 50%;
+          width: 15mm;
+          height: 15mm;
+          flex: 3cm;
+          margin-left: 3mm;
+          margin-right: 3mm;
+          object-fit: cover;"></div>
+        
+    
+        <div style="line-height: 1mm; flex: 1;">
+          <p style="
+          font-weight: bold;
+          font-family: arial;">Mimi</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);"">sleepy dog</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);
+          font-size: 3.5mm;">Popular</p>
+        </div>
+    
+        
+        <div style="margin-right: 3mm;"><button style="
+          background-color: rgb(26, 117, 253);
+          border: none;
+          color: white;
+          padding-left: 3mm;
+          padding-right: 3mm;
+          padding-top: 2mm;
+          padding-bottom: 2mm;
+          font-family: arial;
+          font-weight: bold;
+          border-radius: 3px;
+          cursor:pointer;">Follow</button></div>
+        
+        
+    
+    
+      </div>
+  
+      <div style="display: flex; flex-direction: row; align-items: center;width: 8cm;">
+        <div><img src="practice/pictures/dog-3.jpg" style="
+          border-radius: 50%;
+          width: 15mm;
+          height: 15mm;
+          flex: 3cm;
+          margin-left: 3mm;
+          margin-right: 3mm;
+          object-fit: cover;"></div>
+        
+    
+        <div style="line-height: 1mm; flex: 1;">
+          <p style="
+          font-weight: bold;
+          font-family: arial;">Rex</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);">Happy Bulldog</p>
+    
+          <p style="
+          font-family: arial;
+          color:rgb(138, 138, 138);
+          font-size: 3.5mm;">Popular</p>
+        </div>
+    
+        
+        <div style="margin-right: 3mm;"><button style="
+          background-color: rgb(26, 117, 253);
+          border: none;
+          color: white;
+          padding-left: 3mm;
+          padding-right: 3mm;
+          padding-top: 2mm;
+          padding-bottom: 2mm;
+          font-family: arial;
+          font-weight: bold;
+          border-radius: 3px;
+          cursor:pointer;">Follow</button></div>
+        
+      </div>
+        
+     
+  
+    </div>
+
+    <div class="a13" style="
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1cm;">
+      <div style="
+      display: flex;
+      flex-direction: row;
+      background-color: lightpink;
+      width: 100px;
+      align-items:center;
+      justify-content: center;">
+        <p style="
+        background-color: black;
+        color: white;
+        display: inline-block;">item1</p></div>
+      <div style="
+      background-color: lightblue;
+      width: 200px;
+      height: 50.4px;">
+        <p style="
+        background-color: black;
+        color: white;
+        width:fit-content;"></p></div>
+    </div>
+
+    <div class="b13" style="
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin-bottom: 1cm;">
+      <div style="
+      background-color: lightpink;
+      width: 100px;" class="column-1"></div>
+      <div style="background-color: lightblue;" class="column-2">
+        <div style="display: flex;
+        width: 200px;">row1</div>
+        <div style="
+        display: flex;
+        justify-content: space-between;">
+          <div style="
+          background-color: black;
+          color: white;">row2</div>
+          <div style="
+          background-color: black;
+          color: white;">row2</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="c13" style="
+    margin-bottom: 1cm;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15), -2px -2px 5px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    width: 13cm;">
+
+      <div class="row1" style="
+      margin-left: 4mm;
+      margin-top: 5mm;
+      padding-top: 3mm;
+      margin-bottom: 5mm;
+      font-family: roboto, arial;
+      color: rgb(143, 143, 143);
+      font-size: 16px;">ALL INBOXES</div>
+
+
+      <div class="row2">
+        <div class="columns" style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5mm;">
+
+          <img class="pic13a-column1" style="
+          margin-left: 4mm;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;" src="practice/pictures/dog-1.jpg">
+
+          <div class="column2">
+            <div class="header-time" style="display: flex; flex-direction: row;">
+              <div class="header" style="
+                flex: 1;
+                padding-right: 3cm;
+                margin-left: 3mm;
+                font-family: arial;
+                font-weight: bold;">Chewy Promotions<br>Biggest sales  of the year!</div>
+              <div class="time" style="width:fit-content; color: rgb(143, 143, 143);">4:58 PM</div>
+            </div>
+
+            <div class="hey-there" style="
+            font-family: roboto, arial;
+            color: rgb(143, 143, 143);
+            font-size: 16px;
+            margin-left: 3mm;
+            margin-top: 3mm;
+            margin-bottom: 4mm;">Hey there! We're writing to tell you about our...</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+ 
+    <div class="d13" style="
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15), -2px -2px 5px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    width: 13cm;">
+
+      <div class="row1" style="
+      margin-left: 4mm;
+      margin-top: 5mm;
+      padding-top: 3mm;
+      margin-bottom: 5mm;
+      font-family: roboto, arial;
+      color: rgb(143, 143, 143);
+      font-size: 16px;">ALL INBOXES</div>
+
+
+      <div class="row2">
+        <div class="columns" style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5mm;">
+
+          <img class="pic13a-column1" style="
+          margin-left: 4mm;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;" src="practice/pictures/dog-1.jpg">
+
+          <div class="column2">
+            <div class="header-time" style="display: flex; flex-direction: row;">
+              <div class="header" style="
+                flex: 1;
+                padding-right: 3cm;
+                margin-left: 3mm;
+                font-family: arial;
+                font-weight: bold;">Chewy Promotions<br>Biggest sales  of the year!</div>
+              <div class="time" style="width:fit-content; color: rgb(143, 143, 143);">4:58 PM</div>
+            </div>
+
+            <div class="hey-there" style="
+            font-family: roboto, arial;
+            color: rgb(143, 143, 143);
+            font-size: 16px;
+            margin-left: 3mm;
+            margin-top: 3mm;">Hey there! We're writing to tell you about our...</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row3">
+        <div class="columns" style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5mm;">
+
+          <img class="pic13a-column1" style="
+          margin-left: 4mm;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;" src="practice/pictures/dog-2.jpg">
+
+          <div class="column2">
+            <div class="header-time" style="display: flex; flex-direction: row;">
+              <div class="header" style="
+                flex: 1;
+                padding-right: 3cm;
+                margin-left: 3mm;
+                font-family: arial;
+                font-weight: bold;">Best Buy<br>Your Best Buy eReceipt</div>
+              <div class="time" style="width:fit-content; color: rgb(143, 143, 143);">12:32 PM</div>
+            </div>
+
+            <div class="hey-there" style="
+            font-family: roboto, arial;
+            color: rgb(143, 143, 143);
+            font-size: 16px;
+            margin-left: 3mm;
+            margin-top: 3mm;">Thank you for shopping at Best Buy, here is...</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row4">
+        <div class="columns" style="
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5mm;">
+
+          <img class="pic13a-column1" style="
+          margin-left: 4mm;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;" src="practice/pictures/dog-3.jpg">
+
+          <div class="column2">
+            <div class="header-time" style="display: flex; flex-direction: row;">
+              <div class="header" style="
+                flex: 1;
+                margin-left: 3mm;
+                font-family: arial;
+                font-weight: bold;">Netflix<br>Here's what's coming soon to Netflix</div>
+              <div class="time" style="margin-right: -10mm; width:fit-content; color: rgb(143, 143, 143);">9:00 AM</div>
+            </div>
+
+            <div class="hey-there" style="
+            font-family: roboto, arial;
+            color: rgb(143, 143, 143);
+            font-size: 16px;
+            margin-left: 3mm;
+            margin-top: 3mm;
+            margin-bottom: 8mm;">Brand new movies and shows, old favorites...</div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="f13">
+      <div class="row1-f13">
+        <div class="pic-column-f13">
+          <img class="pic-f13" src="practice/pictures/dog-1.jpg">
+        </div>
+        <div class="text-column-f13">
+          <div class="row1a-f13-username">
+            <p class="username-f13">abhinandan.1909</p>
+            <p class="userat-f13">@Abhinandan1909</p>
+          </div>
+          <div class="row2a-f13-title">What is backend web development? A complete overview. New video is up!</div>
+        </div>
+      </div>
+
+      <div class="row2-f13">
+        <div class="left-section-f13">
+          <button class="button-left"></button>
+        </div>
+        <div class="right-section-f13">
+          <button class="button-right">
+            <p class="yt-site-f13">youtube.com</p>
+            <p class="yt-title-f13">Backend web development - a complete overview (2021)</p>
+          </button>
+        </div> 
+      </div>
+    </div>
+
+    
+
+    
+<!Layout for grid is more rigid wile flexbox has a more flexible layout>   
+
+   
+  </body>
+</html>
+

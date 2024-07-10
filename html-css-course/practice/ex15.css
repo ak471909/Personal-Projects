@@ -1,0 +1,131 @@
+body{
+  margin-bottom: 3000px;
+}
+.a15{
+  
+  position: absolute;
+  top: 3mm;
+  right: 3mm;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: arial;
+  height: 1cm;
+  width: 1cm;
+  cursor: pointer;
+}
+
+.b15{
+  position: fixed;
+  bottom: 5mm;
+  right: 3mm;
+
+  height: 180px;
+  width: 320px;
+  background-color: gray;
+}
+
+.c15{
+  position: absolute;
+  top: -4mm;
+  left: -4mm;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: arial;
+  height: 1cm;
+  width: 1cm;
+  cursor: pointer;
+}
+
+.d15{
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 2mm;
+  right: 2mm;
+  padding-left: 2mm;
+  padding-right: 2mm;
+  padding-top: 1mm;
+  padding-bottom: 1mm;
+  font-family: Arial;
+  font-size: 13px;
+}
+
+.e15{
+  position: relative;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  width: 6.2cm;
+}
+
+.e15-pic{
+  height: 7cm;
+  padding-top: 1cm;
+  padding-bottom: 8mm;
+  padding-left: 2mm;
+  padding-right: 2mm;
+}
+
+.e15-off{
+  position: absolute;
+  top: 2mm;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding-left: 2mm;
+  padding-right: 2mm;
+  padding-top: 1mm;
+  padding-bottom: 1mm;
+}
+
+.e15-bg{
+  position: absolute;
+  height: 2.7cm;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(239, 239, 239, 0.864);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.15s;
+
+}
+
+.e15 :hover ~ .e15-bg{
+  opacity: 1;
+  
+}
+
+.e15-atc{
+  position: absolute;
+  bottom: 0.8cm;
+  left: 1.6cm;
+
+  width: 3cm;
+  padding-top: 2mm;
+  padding-bottom: 2mm;
+  opacity: 0;
+  border-width: 2px;
+  pointer-events: none;
+  cursor: pointer;
+
+  transition: opacity 0.15s;
+
+}
+
+.e15 :hover ~ .e15-atc{
+  opacity: 1;
+}
+
+
+
+
+
+

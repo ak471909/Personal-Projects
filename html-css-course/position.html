@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position Practice</title>
+    <link rel="stylesheet" href="position.css">
+    
+
+  </head>
+  <body style="
+  height: 3000px;
+  padding-top: 60px;
+  padding-left: 80px;">
+    <div class="header" style="
+      background-color: black;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0px;
+      right: 0px;
+      height: 50px; 
+      z-index: 0;">Header</div>
+
+      <div class="sidebar" style="
+      background-color: green;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      top: 50px;
+      width: 72px;">
+        sidebar
+        <div class="absolute" style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0px;
+        top: 0px;">
+      X
+    </div>  
+      </div>
+
+ 
+
+    
+    <div class="div1" style="
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+    position: relative">div1</div>
+
+    
+    <div class="div2" style="
+    background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    position: relative;">
+      div2
+      <div class="absolute" style="
+        position: absolute;
+        background-color: black;
+        color: white;
+        right: 10px;
+        bottom: 10px;">
+          5:00
+      </div>         
+    
+    </div>
+    
+  
+    <div class="a14" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;">
+      bottom-right
+    </div>
+   
+    <div class="b14" style="
+    position: fixed;
+    background-color: green;
+    color: white;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+
+    ">right sidebar
+    </div>
+
+    <div class="c14" s_yle="
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;">
+    </div>
+
+    <div class="d14"></div>
+
+    <div class="e14">
+      <div class="e14-userid">
+        <img class="e14-pfp" src="practice/pictures/dog-1.jpg">
+        <p class="e14-username">Oliver Dog</p>
+      </div>
+      <Button class="e14-adfrn">Add Friend</Button>
+      <button class="e14-msg">Message</button>
+    </div>
+
+    <div class="absolute" style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 60px;
+    z-index: 100;">
+      absolute
+    </div>  
+<! z index specifies preference of layer of absolute and relative elements> 
+<!absolute position used for placing element in a precise location on the page>
+    
+
+  
+
+   
+  </body>
+</html>

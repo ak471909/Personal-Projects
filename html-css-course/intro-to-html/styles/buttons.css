@@ -1,0 +1,320 @@
+.subscribe-button{
+    background-color: rgb(204, 0, 0);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: opacity 0.15s;
+    vertical-align: top;
+  }
+
+  .subscribe-button:hover{ 
+    opacity: 0.8; 
+  }
+
+  .subscribe-button:active{
+    opacity: 0.5; 
+  }
+
+
+  .join-button{
+    background-color: white;
+    border-color: rgb(6, 95, 212);
+    border-style: solid;
+    border-width: 1px;
+    color:rgb(6, 95, 212);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.15 s,
+      color 0.15s;
+    padding-left: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 16px;
+    vertical-align: top;
+
+  }
+
+  .join-button:hover{
+    background-color: rgb(6, 95, 212);
+    color: white;
+  }
+
+  .join-button:active{
+    opacity: 0.7;
+  }    
+
+  .tweet-button{
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border: none;
+    padding-left: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    border-radius: 18px; 
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: box-shadow  0.15s;
+    vertical-align: top;
+  }
+
+  .tweet-button:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .uber-button{
+    background-color: black;
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .uber-button:hover{
+    opacity:0.85;
+  }
+
+  .amazon-button{
+    background-color: rgb(255, 216, 20);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 18px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .amazon-button:hover{
+    background-color: rgb(237, 202, 23);
+    
+  }
+
+  .github-button{
+    background-color: rgb(46,164,79);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: box-hover 0.15s;
+  }
+
+  .github-button:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .bootstrap-button1{
+    background-color: rgb(121,82,179);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 5px
+  }
+
+  .bootstrap-button1:hover{
+    background-color: rgb(103, 62, 164);
+  }
+
+  .bootstrap-button2{
+    background-color: white;
+    color: rgb(108,117,125);
+    border-color: rgb(108,117,125);
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 10px
+  }
+
+  .bootstrap-button2:hover{
+    background-color: rgb(99, 98, 98);
+    color: white;       
+  }
+
+  .linkedln-button1{
+    background-color: rgb(10,102,194);
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+   }
+
+   .linkedln-button1:hover{
+    background-color: rgb(3, 82, 161);
+   }
+
+   .linkedln-button2{
+    background-color: white;
+    color:blue;
+    border-style: solid;
+    border-color: blue;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 20px;
+    border-width: 1px;
+    cursor: pointer;
+    margin-right: 10px;
+   }
+   .linkedln-button2:hover{
+    background-color: rgb(202, 206, 255);
+    border-width: 3px
+   }
+
+   .back-next-button{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+   }
+
+   .page-numbers-button{
+    background-color: white;
+    border:none;
+    text-decoration:underline;
+    color:blueviolet;
+   }
+
+   .stretch-button{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    transition: padding-top 1s,
+     padding-bottom 1s,
+     padding-right 1s,
+     padding-left 1s;
+   }
+
+   .stretch-button:hover{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 32px;
+    padding-left: 32px;
+   }
+   
+   .shadow-button{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;  
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);     
+   }
+
+   .shadow-button:active{
+    box-shadow: 0px 0px 0px 0;
+   }
+
+   .mptogether-button{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-left: 7px;
+    margin-right: 7px; 
+    transition:padding-right 1s,
+     padding-left 1s;     
+   }
+
+   .mptogether-button:hover{
+    padding-left: 25px;
+    padding-right: 25px;
+   }
+
+   .refresh-button{
+    color: rgb(125, 4, 255);
+    font-weight: bolder;
+    font-size: 30px; 
+    margin-right: 20px;
+    margin-bottom: 20px; 
+    transition: color 0.5s;    
+   }
+
+   .refresh-button:hover{
+    color:rgba(21, 255, 0, 0.902);
+   }
+
+    .refresh-button:active{
+      color:rgb(0, 221, 255);
+   }
+
+   .text-file-button{
+    color: rgb(255, 242, 0);
+    font-weight: bolder;
+    font-size: 30px; 
+    margin-right: 20px;
+    margin-bottom: 20px; 
+    transition: box-shadow 0.5s, color 0.5s;
+
+    
+   }
+
+   .text-file-button:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    color: rgb(253, 36, 159);        
+    }  
+    
+    .text-file-button:active{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    color: rgb(36, 253, 47);        
+    } 
+       
