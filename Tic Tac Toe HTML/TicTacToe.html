@@ -1,0 +1,684 @@
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+
+    <style>
+
+      body{
+        background-color:lightseagreen;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      #game_name{
+        margin-left: 0.6cm;
+        font-size: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #game_board{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 11cm;
+        width: 7cm;
+       justify-content: center;
+       align-items: center;;
+      }
+
+      #score_card{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        background-color: lightblue;
+        margin-left: 2cm;
+        padding-left: 3mm;
+        padding-right: 3mm;
+      }
+
+      .cell{
+        display: inline-block;
+       justify-content: center;
+       align-items: center;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        height: 2cm;
+        width: 2cm;
+        margin-top:1mm;
+        font-size: 40px;
+      }
+
+      #b1{
+        border-top-left-radius: 10px;
+      }
+
+      #b3{
+        border-top-right-radius: 10px;
+      }
+
+      #b7{
+        border-bottom-left-radius: 10px;;
+      }
+
+      #b9{
+        border-bottom-right-radius: 10px;
+      }
+
+      .sc_score{
+        color:green;
+      }
+
+      #reset{
+        display: block;
+        margin-top: 1cm;
+        background-color: blanchedalmond;
+        color:red;
+        height: 1cm;
+        width:2cm;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+
+      #reset_sb{
+        background-color: blanchedalmond;
+        color:red;
+        height: 1.4cm;
+        width:3cm;
+        font-size: 15px;
+        border-radius: 10px;
+      }
+
+      #sc_txt{
+        font-weight: 700;
+        font-size: 20px;
+        color: #6D74F1;
+      }
+
+      #p1_wins{
+        color: blue;
+      }
+      #h-line{
+        display:inline-block;
+        position:absolute;
+        top:-63px;
+        left: 3px;
+        font-size: 3cm;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .transition-hline{
+        animation: slide-in 1s linear forwards;
+      }
+
+      @keyframes slide-in {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      #v-line{
+        font-size: 6.7cm;
+        display:inline-block;
+        position:absolute;
+        top:-4.4cm;
+        left:13px;
+        color: white;
+        opacity: 1;
+        pointer-events: none;
+        animation: slide-down 1s linear forwards;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      
+
+      .vertical-line {
+        position: relative;
+      }
+
+      .vertical-line::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        bottom: 2cm;
+        width: 6px;
+        height: 0px; /* Adjust the height as needed */
+        background-color: white;
+        opacity: 0;
+        transition: height 1s;
+      }
+
+      .transition-active::before{
+        opacity: 1;
+        height: 234px;
+ 
+      }
+
+  
+      .diagonal-line1 {
+        position: relative;
+      }
+
+      .diagonal-line1::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        bottom: 1cm;
+        left: 115px;
+        width: 6px;
+        height: 0px; /* Adjust the height as needed */
+        background-color: white;
+        opacity: 0;
+        transition: height 1s;
+        transform: rotate(45deg);
+      }
+
+      .transition-diagonal::before{
+        opacity: 1;
+        height: 310px;
+ 
+      }
+
+      .diagonal-line2 {
+        position: relative;
+      }
+
+      .diagonal-line2::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        bottom: 1cm;
+        left: 115px;
+        width: 6px;
+        height: 0px; /* Adjust the height as needed */
+        background-color: white;
+        opacity: 0;
+        transition: height 1s;
+        transform: rotate(135deg);
+      }
+
+      .transition-diagonal2::before{
+        opacity: 1;
+        height: 310px;
+ 
+      }
+
+  
+
+
+
+      
+    </style>
+
+  </head>
+  <body>
+    
+
+   
+
+    <div id = "game_board">
+      <h1 id="game_name">Tic Tac Toe</h1>
+
+      <p id = "player">Player 1 turn:</p>
+      <button class = "cell" id = "b1" type="button" onclick = " clicked()">&nbsp;</button>
+      <button class = "cell" id = "b2" type = "button" onclick = "clicked()">&nbsp;</button>
+      <button class = "cell" id = "b3" type = "button" onclick = "clicked()">&nbsp;</button>
+      <br>
+      <button class = "cell" id = "b4" type = "button" onclick = "clicked()">&nbsp;</button>
+      <button class = "cell" id = "b5" type = "button" onclick = "clicked()">&nbsp;</button>
+      <button class = "cell" id = "b6" type = "button" onclick = "clicked()">&nbsp;</button>
+      <br>
+      <button class = "cell" id = "b7" type = "button" onclick = "clicked()">&nbsp;</button>
+      <button class = "cell" id = "b8" type = "button" onclick = "clicked()">&nbsp;</button>
+      <button class = "cell" id = "b9" type = "button" onclick = "clicked()">&nbsp;</button>
+
+      <button id="reset" type = "button" onclick = "reset_board()">Reset</button>
+      <p id = "h-line">____</p>
+      <div class="vertical-line"></div>
+      <div class = "diagonal-line1"></div>
+      <div class = "diagonal-line2"></div>
+      
+    </div>
+
+    <div id = "score_card">
+      <p id = "sc_txt"><u>Scorecard:</u></p>
+      <p class = "sc_score" id = "p1_wins"></p>
+      <p class = "sc_score" id = "p2_wins"></p>
+      <p id = "ties"></p>
+      <button id = "reset_sb" type = "button" onclick = "reset_sb()">Reset scoreboard</button>
+
+      <h3 id= "win"></h3>
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    <script type="text/javascript">
+
+
+      let board = [
+        [" "," "," "],
+        [" "," "," "],
+        [" "," "," "]
+      ];
+
+      let fboard = [
+        ["X","X","X"],
+        ["X","X","X"],
+        ["X","X","X"]
+      ]; 
+
+
+      //Returns true if winning condition is satisfied
+      function check_win(board){
+        let check = false;
+        var r = 0;
+        var c = 0;
+
+        //checking each row
+        for (r = 0; r <=2; r++){ 
+          c=0;
+          var c1 = board[r][c];
+          var c2 = board[r][c+1];
+          var c3 = board[r][c+2];
+
+          if ((c1 == "X" && c2 == "X" && c3 == "X") ||
+          (c1 == "O" && c2 == "O" && c3 == "O")){
+            if (r == 0){
+              var hline = document.getElementById("h-line");
+              hline.style.opacity = "1";
+
+              const element = document.getElementById('h-line');
+
+              element.classList.add("transition-hline");
+            }
+            if (r == 1){
+              var hline = document.getElementById("h-line");
+              hline.style.opacity = "1";
+              hline.style.top = "15px"; // Middle row
+              const element = document.getElementById('h-line');
+
+              element.classList.add("transition-hline");
+              
+            }
+            if (r == 2){
+              var hline = document.getElementById("h-line");
+              hline.style.opacity = "1";
+              hline.style.top = "95px"; // bottom row
+              const element = document.getElementById('h-line');
+
+              element.classList.add("transition-hline");
+              
+            }
+
+            return true;
+          }
+
+        }
+
+        //checking each column
+        //document.getElementById("h-line").style.opacity = "1";
+       
+        //hline.style.top = "15px"; // Middle row
+        //hline.style.top = "95px"; //bottom row
+        for (c = 0; c<=2 ; c++){ 
+          r = 0;
+          var c1 = board[r][c];
+          var c2 = board[r+1][c];
+          var c3 = board[r+2][c];
+
+          if ((c1 == "X" && c2 == "X" && c3 == "X") ||
+          (c1 == "O" && c2 == "O" && c3 == "O")){
+            if (c==0){
+              const element = document.querySelector('.vertical-line');
+              element.style.left = "35px";
+              element.classList.add('transition-active');
+            }
+            if (c==1){
+              const element = document.querySelector('.vertical-line');
+              element.style.left = "115px";
+              element.classList.add('transition-active');
+            }
+            if (c==2){
+              const element = document.querySelector('.vertical-line');
+              element.style.left = "194px";
+              element.classList.add('transition-active');
+            }
+            return true;
+            
+          }
+        }
+
+        //checking diagonals
+        var c11 = board[0][0];
+        var c22 = board[1][1];
+        var c33 = board[2][2];
+        var c13 = board[0][2];
+        var c31 = board[2][0];
+        if ((c11 == "X" && c22 == "X" && c33 == "X") ||
+        (c11 == "O" && c22 == "O" && c33 == "O")){
+          const element = document.querySelector('.diagonal-line2');
+          element.classList.add('transition-diagonal2');
+          return true;
+        } 
+        
+        
+        if((c13 == "X" && c22 == "X" && c31 == "X") ||
+        (c13 == "O" && c22 == "O" && c31 == "O")){
+          const element = document.querySelector('.diagonal-line1');
+          element.classList.add('transition-diagonal');
+          return true;
+        }
+
+
+
+        return false;
+        
+      }
+
+      //returns true if there is no empty spot on the board 
+      function check_full(board){
+        var r;
+        var c;
+        for (r = 0; r <= 2; r++){
+          for (c = 0; c <= 2; c++){
+            if (board[r][c] == " "){
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+
+      //returns true if the board is empty
+      function check_empty(board){
+        var r;
+        var c;
+        for (r=0;r<=2;r++){
+          for(c=0;c<=2;c++){
+            if (board[r][c] == "X" || board[r][c] == "O"){
+              return false;
+            }
+          }
+        }
+        return true;
+
+      }
+
+      
+
+       //returns ID of the button that is clicked 
+       function getId(event){
+        var Button = event.target || event.srcElement;
+        var buttonId = Button.id;
+        //document.getElementById("test").innerHTML = buttonId;
+        return buttonId;
+      }
+
+      //returns "X" if the input is currently "O" and vice versa
+      function change_inp(input){
+        b_id = getId(event);
+        b_value  = document.getElementById(b_id).innerHTML;
+        
+  
+        if (input == "X"){
+        input = "O";
+        }
+        else{input = "X";}
+        return input;
+      
+      
+        return input;
+      
+        
+        
+      }
+
+      //sets button value as input and returns button value
+      function button_value(inp){
+        b_id = getId(event);
+        b_value  = document.getElementById(b_id).innerHTML;
+        if (b_value != "X" && b_value != "O"){ //only sets input value to button if button is empty
+          document.getElementById(b_id).innerHTML = inp;
+        }
+        return b_value;
+        
+      }
+
+      //Enters value into array when button is clicked
+      function array_value(inp,ar){
+        var b_id = getId(event);
+
+        if (b_id == "b1" && (ar[0][0] == " ")){
+          ar[0][0] = inp;
+        }
+
+        else if (b_id == "b2" && (ar[0][1] == " ")){
+          ar[0][1] = inp;
+        }
+
+        else if (b_id == "b3" && (ar[0][2] == " ")){
+          ar[0][2] = inp;
+        }
+
+        else if (b_id == "b4" && (ar[1][0] == " ")){
+          ar[1][0] = inp;
+        }
+
+        else if (b_id == "b5" && (ar[1][1] == " ")){
+          ar[1][1] = inp;
+        }
+
+        else if (b_id == "b6" && (ar[1][2] == " ")){
+          ar[1][2] = inp;
+        }
+
+        else if (b_id == "b7" && (ar[2][0] == " ")){
+          ar[2][0] = inp;
+        }
+
+        else if (b_id == "b8" && (ar[2][1] == " ")){
+          ar[2][1] = inp;
+        }
+
+        else if (b_id == "b9" && (ar[2][2] == " ")){
+          ar[2][2] = inp;
+        }
+
+        return ar;
+
+
+        //document.getElementById("test").innerHTML = b_id;
+        
+        
+      }
+
+      
+      let p1_w = 0;
+      let p2_w = 0;
+      let ti = 0;
+
+      document.getElementById("p1_wins").innerHTML = "Player 1 : "+p1_w;
+      document.getElementById("p2_wins").innerHTML = "Player 2: "+p2_w;
+      document.getElementById("ties").innerHTML = "Ties: "+ti;
+
+
+      function increaseval(val){
+        val++;
+        return val;
+      }
+
+      var current_inp = "X"
+      var winState = false;
+      //Performs all necessary functions from above when a button is clicked
+      function clicked(){
+        //input value of button clicked into array
+        //check for win
+        //if there is no win and the board is full call draw
+        //if there is no win and the board is not full then value of input is changed 
+
+        b_id = getId(event);
+        b_value  = document.getElementById(b_id).innerHTML;
+
+        button_value(current_inp);
+
+        var player = 0;
+        if (current_inp == "X"){
+          player = 1;
+        }
+        else {
+          player = 2;
+        }
+
+        var pn;
+        if (player == 1){
+          pn = 2;
+        }
+        else{
+          pn = 1;
+        }
+
+        
+
+        
+        board = array_value(current_inp,board);
+        if (check_win(board) == true){
+          
+          current_inp = "&nbsp;";
+          if (player == 1 && winState == false){
+            p1_w++;
+            document.getElementById("p1_wins").innerHTML = "Player 1: "+p1_w;
+            document.getElementById("win").innerHTML = "Player "+player+" has won";
+            winState = true;
+          }
+          else if(player == 2 && winState == false){
+            p2_w++;
+            document.getElementById("p2_wins").innerHTML = "Player 2: "+p2_w;
+            document.getElementById("win").innerHTML = "Player "+player+" has won";
+            winState = true;
+          }
+
+          //board = reset_board();
+        }
+        else if (check_win(board) == false && check_full(board) == true){
+          document.getElementById("win").innerHTML = "Draw";
+          current_inp = "&nbsp";
+          if (winState == false){
+            ti++;
+            document.getElementById("ties").innerHTML = "Ties: "+(ti);
+            winState = true;
+          }
+          
+          
+          //board = reset_board();
+        }
+
+        else if (check_win(board) == false && check_full(board) == false && b_value == "&nbsp;"){
+          current_inp = change_inp(current_inp);
+          document.getElementById("player").innerHTML = "Player "+pn+" turn:";
+        }
+      }
+
+
+      
+
+      //resets board to and buttons to blank
+      function reset_board(){
+        board = [
+        [" "," "," "],
+        [" "," "," "],
+        [" "," "," "]
+        ];
+
+        document.getElementById("b1").innerHTML = "&nbsp;";
+        document.getElementById("b2").innerHTML = "&nbsp;";
+        document.getElementById("b3").innerHTML = "&nbsp;";
+        document.getElementById("b4").innerHTML = "&nbsp;";
+        document.getElementById("b5").innerHTML = "&nbsp;";
+        document.getElementById("b6").innerHTML = "&nbsp;";
+        document.getElementById("b7").innerHTML = "&nbsp;";
+        document.getElementById("b8").innerHTML = "&nbsp;";
+        document.getElementById("b9").innerHTML = "&nbsp;";
+
+        current_inp = "X";
+        winState = false;
+
+        document.getElementById("win").innerHTML = "";
+        document.getElementById("player").innerHTML = "Player 1 turn:";
+        var hline = document.getElementById("h-line");
+        hline.style.opacity = "0";
+        hline.classList.remove("transition-hline");
+
+        const element = document.querySelector('.vertical-line');
+        element.style.left = "0";
+        element.classList.remove('transition-active');
+
+        const diag1 = document.querySelector('.diagonal-line1');
+        diag1.style.opacity = "0";
+        diag1.classList.remove('transition-diagonal');
+
+        const diag2 = document.querySelector('.diagonal-line2');
+        diag2.style.opacity = "0";
+        diag2.classList.remove('transition-diagonal2');
+        
+
+
+      }
+
+      function reset_sb(){
+        reset_board();
+
+        if (p1_w > p2_w){
+          window.alert("Player 1 wins the game!");
+        }
+        else if (p2_w > p1_w){
+          window.alert("Player 2 wins the game!")
+        }
+        else{
+          window.alert("Game is a tie!")
+        }
+        p1_w = 0;
+        p2_w = 0;
+        ti = 0;
+        
+        document.getElementById("p1_wins").innerHTML = "Player 1 : 0";
+      document.getElementById("p2_wins").innerHTML = "Player 2: 0";
+      document.getElementById("ties").innerHTML = "Ties: 0";
+      }
+
+      
+      
+
+      
+      
+
+      document.getElementById("asdf").innerHTML= "javascript code works";
+      document.getElementById("test").innerHTML = p1_w;
+
+      </script>
+    
+
+  </body>
+</html>
